@@ -50,7 +50,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-black px-4 py-2 shadow-md space-y-2">
+        <div className="md:hidden bg-black px-4 py-2 shadow-md space-y-2 font-open-sans">
           {navLinks.map((link) => (
             <Link
               key={link.href}

@@ -3,3 +3,11 @@
 .font-open-sans {
   font-family: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
 }
+
+.font-inter {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-birthstone {
+  font-family: var(--font-birthstone);
+}
