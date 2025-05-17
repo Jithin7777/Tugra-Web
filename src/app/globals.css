@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.font-open-sans {
+  font-family: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+}
