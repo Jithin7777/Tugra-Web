@@ -64,22 +64,22 @@ const MenuShowcaseCarousel = () => {
   if (!hasMounted) return null
 
   return (
-    <div className="bg-[#0B0F11] py-8 md:py-16 px-4">
-      <h2 className="text-center text-lg tracking-widest text-white uppercase mb-8 md:mb-12 font-light">
-        What do we have for you
+    <div className="bg-black py-8 md:py-16 px-4">
+      <h2 className="text-center text-[#C9AB81]  text-lg tracking-[5.51px]  font-normal uppercase mb-8 md:mb-12 font-open-sans ">
+        What do we <br />have for you
       </h2>
 
       <div className="relative w-full max-w-7xl mx-auto">
-        {/* Left Arrow - Visible on all screens */}
+        {/* /* Left Arrow  */}
         <button
-          className="absolute top-[40%] -left-2 md:-left-12 -translate-y-1/2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/80 hover:bg-black text-white z-10"
+          className="bg-[#0E171A]  absolute top-[40%] -left-2 md:-left-12 -translate-y-1/2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full  hover:bg-black text-white z-10"
           onClick={() => emblaApi?.scrollPrev()}
           aria-label="Previous slide"
         >
-          <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
+<ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-[#C9AB81]" />
         </button>
 
-        {/* Carousel Container with adjusted margins */}
+        {/* Carousel Container  */}
         <div className="embla overflow-hidden mx-8 md:mx-12" ref={emblaRef}>
           <div className="flex">
             {slides.map((slide, index) => (
@@ -100,7 +100,7 @@ const MenuShowcaseCarousel = () => {
                       />
                     </div>
                   </div>
-                  <p className="text-gold tracking-widest text-xs md:text-sm uppercase text-white">
+                  <p className="text-[#C9AB81] font-normal tracking-[10px] text-xs md:text-sm uppercase font-open-sans ">
                     {slide.title}
                   </p>
                 </div>
@@ -109,13 +109,13 @@ const MenuShowcaseCarousel = () => {
           </div>
         </div>
 
-        {/* Right Arrow - Visible on all screens */}
+        {/* Right Arrow  */}
         <button
-          className="absolute top-[40%] -right-2 md:-right-12 -translate-y-1/2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/80 hover:bg-black text-white z-10"
+          className="bg-[#0E171A]  absolute top-[40%] -right-2 md:-right-12 -translate-y-1/2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full  hover:bg-black text-white z-10"
           onClick={() => emblaApi?.scrollNext()}
           aria-label="Next slide"
         >
-          <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+          <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-[#C9AB81]" />
         </button>
 
         {/* Diamond Indicators */}
