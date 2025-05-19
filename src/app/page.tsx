@@ -8,6 +8,7 @@ import Specialties from './(section)/Specialties'
 import ReserveSection from './(section)/ReserveSection'
 import Reviews from './(section)/Reviews'
 import StoryGallery from './(section)/StoryGallery'
+import Footer from './components/Footer'
 
 const page = () => {
   return (
@@ -22,6 +23,7 @@ const page = () => {
           <ReserveSection/>
           <Reviews/>
           <StoryGallery/>
+          <Footer/>
          </div>
     </main>
   )
