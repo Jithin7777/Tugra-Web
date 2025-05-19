@@ -4,9 +4,10 @@ import { Instagram } from "lucide-react";
 const StoryGallery = () => {
   return (
     <section className="bg-black text-white py-16 px-4 md:px-5">
-      <h2 className="text-4xl uppercase md:text-4xl tracking-[10.59px] font-light text-right mb-16 font-open-sans text-[#C9AB81] -translate-x-20 ">
-        scroll our stories
-      </h2>
+     <h2 className="text-2xl uppercase md:text-4xl tracking-[5px] md:tracking-[10.59px] font-light text-right mb-16 font-open-sans text-[#C9AB81] md:-translate-x-20 -translate-x-0">
+  scroll our stories
+</h2>
+
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         <img
