@@ -7,6 +7,7 @@ import ArchivesSection from './(section)/ArchivesSection'
 import Specialties from './(section)/Specialties'
 import ReserveSection from './(section)/ReserveSection'
 import Reviews from './(section)/Reviews'
+import StoryGallery from './(section)/StoryGallery'
 
 const page = () => {
   return (
@@ -20,6 +21,7 @@ const page = () => {
           <Specialties/>
           <ReserveSection/>
           <Reviews/>
+          <StoryGallery/>
          </div>
     </main>
   )
