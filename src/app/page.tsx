@@ -6,6 +6,7 @@ import MenuShowcaseCarousel from './(section)/MenuShowcaseCarousel'
 import ArchivesSection from './(section)/ArchivesSection'
 import Specialties from './(section)/Specialties'
 import ReserveSection from './(section)/ReserveSection'
+import Reviews from './(section)/Reviews'
 
 const page = () => {
   return (
@@ -18,6 +19,7 @@ const page = () => {
           <ArchivesSection/>
           <Specialties/>
           <ReserveSection/>
+          <Reviews/>
          </div>
     </main>
   )

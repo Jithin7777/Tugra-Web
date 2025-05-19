@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Birthstone, Geist, Geist_Mono, Inter, Open_Sans } from "next/font/google";
+import { Birthstone, Geist, Geist_Mono, Inter, Joan, Open_Sans } from "next/font/google";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -7,6 +7,13 @@ const openSans = Open_Sans({
   weight: ['400'],
   display: 'swap',
   variable: '--font-open-sans',
+});
+
+const joan = Joan({
+  subsets: ["latin"],
+  weight: ["400"], // Or include more weights if needed
+  display: "swap",
+  variable: "--font-joan",
 });
 
 const inter = Inter({
@@ -46,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable}  ${birthstone.variable}  ${inter.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable}  ${birthstone.variable}  ${inter.variable} ${joan.variable}  antialiased`}
       >
         {children}
       </body>

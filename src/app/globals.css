@@ -12,6 +12,11 @@
   font-family: var(--font-birthstone);
 }
 
+.font-joan {
+  font-family: var(--font-joan), serif;
+}
+
+
 .clip-shield {
   clip-path: path("M0,0 H100% V80% C75%,100% 25%,100% 0,80% Z");
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
