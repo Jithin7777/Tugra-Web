@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import { Birthstone, Geist, Geist_Mono, Inter, Joan, Open_Sans } from "next/font/google";
+import {
+  Birthstone,
+  Geist,
+  Geist_Mono,
+  Inter,
+  Joan,
+  Open_Sans,
+} from "next/font/google";
 import "./globals.css";
 
 const openSans = Open_Sans({
-  subsets: ['latin'],
-  weight: ['400'],
-  display: 'swap',
-  variable: '--font-open-sans',
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-open-sans",
 });
 
 const joan = Joan({
@@ -17,10 +24,10 @@ const joan = Joan({
 });
 
 const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300'],
-  variable: '--font-inter',
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["300"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 const birthstone = Birthstone({

@@ -1,72 +1,74 @@
-'use client'
+"use client";
 
-import React, { useEffect, useState, useCallback } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
-import Image from 'next/image'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import React, { useEffect, useState, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Image from "next/image";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const slides = [
   {
-    src: '/images/menu-showcase/cocktails.png',
-    title: 'Cocktails',
-    border: 'border-gold',
-    shape: 'md:rounded-tr-[397px] rounded-tr-[200px]',
+    src: "/images/menu-showcase/cocktails.png",
+    title: "Cocktails",
+    border: "border-gold",
+    shape: "md:rounded-tr-[397px] rounded-tr-[200px]",
   },
   {
-    src: '/images/menu-showcase/chops.png',
-    title: 'Chops',
-    shape: 'md:rounded-tl-[210px] md:rounded-tr-[210px] rounded-tl-[100px] rounded-tr-[100px]',
+    src: "/images/menu-showcase/chops.png",
+    title: "Chops",
+    shape:
+      "md:rounded-tl-[210px] md:rounded-tr-[210px] rounded-tl-[100px] rounded-tr-[100px]",
   },
   {
-    src: '/images/menu-showcase/grills.png',
-    title: 'Grills',
-    border: 'border-blue-500',
-    shape: 'md:rounded-tl-[397px] rounded-tl-[200px]',
+    src: "/images/menu-showcase/grills.png",
+    title: "Grills",
+    border: "border-blue-500",
+    shape: "md:rounded-tl-[397px] rounded-tl-[200px]",
   },
   {
-    src: '/images/menu-showcase/cocktails.png',
-    title: 'Cocktails',
-    border: 'border-gold',
-    shape: 'md:rounded-tr-[397px] rounded-tr-[200px]',
+    src: "/images/menu-showcase/cocktails.png",
+    title: "Cocktails",
+    border: "border-gold",
+    shape: "md:rounded-tr-[397px] rounded-tr-[200px]",
   },
-]
+];
 
 const MenuShowcaseCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+  const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
-    align: 'center',
+    align: "center",
     breakpoints: {
-      '(min-width: 768px)': { align: 'start' }
-    }
-  })
-  const [hasMounted, setHasMounted] = useState(false)
-  const [selectedIndex, setSelectedIndex] = useState(0)
+      "(min-width: 768px)": { align: "start" },
+    },
+  });
+  const [hasMounted, setHasMounted] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   useEffect(() => {
-    setHasMounted(true)
-    if (emblaApi) emblaApi.scrollTo(0)
-  }, [emblaApi])
+    setHasMounted(true);
+    if (emblaApi) emblaApi.scrollTo(0);
+  }, [emblaApi]);
 
   const onSelect = useCallback(() => {
-    if (!emblaApi) return
-    setSelectedIndex(emblaApi.selectedScrollSnap())
-  }, [emblaApi])
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
 
   useEffect(() => {
-    if (!emblaApi) return
-    onSelect()
-    emblaApi.on('select', onSelect)
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
     return () => {
-      emblaApi.off('select', onSelect)
-    }
-  }, [emblaApi, onSelect])
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
-  if (!hasMounted) return null
+  if (!hasMounted) return null;
 
   return (
     <div className="bg-black py-8 md:py-16 px-4">
       <h2 className="text-center text-[#C9AB81]  text-lg tracking-[5.51px]  font-normal uppercase mb-8 md:mb-12 font-open-sans ">
-        What do we <br />have for you
+        What do we <br />
+        have for you
       </h2>
 
       <div className="relative w-full max-w-7xl mx-auto">
@@ -76,7 +78,7 @@ const MenuShowcaseCarousel = () => {
           onClick={() => emblaApi?.scrollPrev()}
           aria-label="Previous slide"
         >
-<ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-[#C9AB81]" />
+          <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-[#C9AB81]" />
         </button>
 
         {/* Carousel Container  */}
@@ -88,8 +90,12 @@ const MenuShowcaseCarousel = () => {
                 className="min-w-0 flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_33.33%] px-2 md:px-4"
               >
                 <div className="flex flex-col items-center gap-5 md:gap-6">
-                  <div className={`p-1 md:p-[9.95px] bg-gradient-to-r from-[#AE8B38] to-black ${slide.shape}`}>
-                    <div className={`w-full h-[250px] md:h-[380px] overflow-hidden bg-black shadow-lg ${slide.shape}`}>
+                  <div
+                    className={`p-1 md:p-[9.95px] bg-gradient-to-r from-[#AE8B38] to-black ${slide.shape}`}
+                  >
+                    <div
+                      className={`w-full h-[250px] md:h-[380px] overflow-hidden bg-black shadow-lg ${slide.shape}`}
+                    >
                       <Image
                         src={slide.src}
                         alt={slide.title}
@@ -125,28 +131,32 @@ const MenuShowcaseCarousel = () => {
               key={index}
               onClick={() => emblaApi?.scrollTo(index)}
               className={`w-2 h-2 md:w-2 md:h-2 rotate-45 transition-all duration-300 relative overflow-hidden ${
-                index === selectedIndex 
-                  ? 'scale-125 border border-[#9C7C57]' 
-                  : 'border border-[#9C7C576E] hover:border-[#9C7C57]'
+                index === selectedIndex
+                  ? "scale-125 border border-[#9C7C57]"
+                  : "border border-[#9C7C576E] hover:border-[#9C7C57]"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${
-                index === selectedIndex
-                  ? 'from-[#9C7C57] via-[#8A6D4D] to-[#9C7C57]'
-                  : 'from-[#9C7C576E] via-[#9C7C573D] to-[#9C7C576E]'
-              }`} />
-              <div className="absolute inset-0 bg-gradient-to-tl opacity-60 ${
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${
+                  index === selectedIndex
+                    ? "from-[#9C7C57] via-[#8A6D4D] to-[#9C7C57]"
+                    : "from-[#9C7C576E] via-[#9C7C573D] to-[#9C7C576E]"
+                }`}
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-tl opacity-60 ${
                 index === selectedIndex
                   ? 'from-[#B08D5F] to-transparent'
                   : 'from-[#9C7C576E] to-transparent'
-              }" />
+              }"
+              />
             </button>
           ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MenuShowcaseCarousel
+export default MenuShowcaseCarousel;
