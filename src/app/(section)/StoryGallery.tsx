@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Instagram } from "lucide-react";
 
 const StoryGallery = () => {
@@ -18,8 +18,8 @@ const StoryGallery = () => {
         <div className="flex flex-col items-center justify-center  text-white h-64 w-full rounded-md">
           <Instagram size={58} className="mt-5 text-[#C59D31]" />
           <p className="text-center uppercase  font-open-sans text-xs md:text-2xl text-[#CEAC5C]  ">
-@tugrahayes</p>
-
+            @tugrahayes
+          </p>
         </div>
 
         <img
@@ -36,23 +36,23 @@ const StoryGallery = () => {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         <img
-          src="/images/scroll-us/img5.png"
+          src="/images/story-gallery/img4.png"
           alt="Image 5"
           className="col-span-1 w-full h-68 object-cover"
         />
         <img
-          src="/images/scroll-us/img6.png"
+          src="/images/story-gallery/img5.png"
           alt="Image 6"
           className="col-span-2 w-full h-68 object-cover"
         />
         <img
-          src="/images/scroll-us/img7.png"
+          src="/images/story-gallery/img6.png"
           alt="Image 7"
           className="col-span-1 w-full h-68 object-cover"
         />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default StoryGallery
+export default StoryGallery;
