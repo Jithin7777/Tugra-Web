@@ -7,10 +7,9 @@ const AboutUs = () => {
   return (
     <section className="bg-black text-white py-32 relative overflow-hidden">
       <div
-  className="absolute top-0 left-0 w-[150px] h-[120px]  md:w-[800px] md:h-[900px] mt-100 pl-56 md:pl-0 md:-mt-30 bg-cover bg-center opacity-70 md:opacity-70 z-0"
-  style={{ backgroundImage: "url('/images/about-us/bg.png')" }}
-/>
-
+        className="absolute top-0 left-0 w-[150px] h-[120px]  md:w-[800px] md:h-[900px] mt-100 pl-56 md:pl-0 md:-mt-30 bg-cover bg-center opacity-70 md:opacity-70 z-0"
+        style={{ backgroundImage: "url('/images/about-us/bg.png')" }}
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         <div />
@@ -19,7 +18,9 @@ const AboutUs = () => {
           <h4 className="text-sm uppercase tracking-[0.76px] text-yellow-300 font-birthstone">
             Our Story
           </h4>
-          <h2 className="text-3xl uppercase text-[#C9AB81] tracking-[10.51px]">About Us</h2>
+          <h2 className="text-3xl uppercase text-[#C9AB81] tracking-[10.51px]">
+            About Us
+          </h2>
         </div>
 
         <div>
@@ -35,7 +36,9 @@ const AboutUs = () => {
       </div>
 
       <div className="relative z-10 mt-10 flex items-end justify-center bg-gradient-to-r from-[#9B834E] to-[#352D1B] bg-clip-text text-transparent tracking-widest font-open-sans leading-none whitespace-nowrap">
-        <span className="text-[5rem] sm:text-[6rem] md:text-[12rem] lg:text-[20rem] xl:text-[28rem]">T</span>
+        <span className="text-[5rem] sm:text-[6rem] md:text-[12rem] lg:text-[20rem] xl:text-[28rem]">
+          T
+        </span>
 
         <span
           className="inline-block align-bottom
@@ -55,9 +58,15 @@ const AboutUs = () => {
           />
         </span>
 
-        <span className="text-[5rem] sm:text-[6rem] md:text-[12rem] lg:text-[20rem] xl:text-[27rem]">G</span>
-        <span className="text-[5rem] sm:text-[6rem] md:text-[12rem] lg:text-[20rem] xl:text-[27rem]">R</span>
-        <span className="text-[5rem] sm:text-[6rem] md:text-[12rem] lg:text-[20rem] xl:text-[27rem]">A</span>
+        <span className="text-[5rem] sm:text-[6rem] md:text-[12rem] lg:text-[20rem] xl:text-[27rem]">
+          G
+        </span>
+        <span className="text-[5rem] sm:text-[6rem] md:text-[12rem] lg:text-[20rem] xl:text-[27rem]">
+          R
+        </span>
+        <span className="text-[5rem] sm:text-[6rem] md:text-[12rem] lg:text-[20rem] xl:text-[27rem]">
+          A
+        </span>
       </div>
     </section>
   );
