@@ -32,7 +32,7 @@ const AboutUs = () => {
       </div>
 
       {/* TUGRA Section */}
-      <div className="mt-10 flex items-end justify-center tracking-widest font-open-sans leading-none whitespace-nowrap ">
+      <div className="mt-10 flex items-end  justify-center bg-gradient-to-r from-[#9B834E] to-[#352D1B] bg-clip-text text-transparent tracking-widest font-open-sans leading-none whitespace-nowrap ">
         <span className="text-[5rem] sm:text-[6rem] md:text-[12rem] lg:text-[20rem] xl:text-[28rem]">T</span>
 
         <span className="inline-block align-bottom
