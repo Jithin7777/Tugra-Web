@@ -11,7 +11,8 @@ const Footer = () => {
           <p className="mb-3">OUR FOOD</p>
           <p>DRINKS MENU</p>
           <p>PRIVATE DINING</p>
-          <p>WHAT'S ON</p>
+          <p>WHAT&apos;S ON</p>
+
           <p>OUR POLICY</p>
         </div>
 
