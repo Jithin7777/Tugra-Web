@@ -11,3 +11,26 @@
 .font-birthstone {
   font-family: var(--font-birthstone);
 }
+
+.clip-shield {
+  clip-path: path("M0,0 H100% V80% C75%,100% 25%,100% 0,80% Z");
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(to bottom, #e1c373, #a47e32);
+}
+
+/* Hexagonal Button */
+.hex-button {
+  @apply text-white px-6 py-2 text-sm font-medium uppercase;
+  background: linear-gradient(to right, #6f4e37, #3c2f1e);
+  border: none;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+  transition: all 0.3s ease;
+}
+
+.hex-button:hover {
+  background: linear-gradient(to right, #3c2f1e, #6f4e37);
+  color: #ffd700;
+}
