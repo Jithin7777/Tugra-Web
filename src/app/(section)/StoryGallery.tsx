@@ -5,16 +5,15 @@ import Image from "next/image";
 const StoryGallery = () => {
   return (
     <section className="relative bg-black text-white pt-5 py-16 md:pt-48 px-4 md:px-5 overflow-hidden">
-      {/* Background Image on the left */}
+      
       <Image
-        src="/images/story-gallery/bg.png" // replace with your actual image path
+        src="/images/story-gallery/bg.png" 
         alt="Left Background"
         width={300}
         height={800}
         className="hidden md:block absolute w-[800px] h-[1300px] -mt-75 left-0 top-0 object-cover z-0 opacity-30"
       />
 
-      {/* Content on top of background */}
       <div className="relative z-10">
         <h2 className="text-2xl uppercase md:text-4xl tracking-[5px] md:tracking-[10.59px] font-light text-right mb-16 font-open-sans text-[#C9AB81] md:-translate-x-20 -translate-x-0">
           scroll our stories
