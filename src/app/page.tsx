@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 const page = () => {
   return (
     <main>
-         <div>
+         <div className=''>
           <Navbar/>
           <Hero/>
           <AboutUs/>
