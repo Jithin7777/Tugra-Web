@@ -65,7 +65,7 @@ const MenuShowcaseCarousel = () => {
   if (!hasMounted) return null;
 
   return (
-    <div className="bg-black py-8 md:py-16 px-4">
+    <div className="bg-black w-full py-8 md:py-16 px-4">
       <h2 className="text-center text-[#C9AB81]  text-lg tracking-[5.51px]  font-normal uppercase mb-8 md:mb-12 font-open-sans ">
         What do we <br />
         have for you
