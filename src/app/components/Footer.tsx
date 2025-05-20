@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <footer className="bg-black text-[#C5A14A] text-sm px-6 md:px-16 py-16 md:pt-40 border-t border-[#AE8B38]">
       <div className="max-w-full  grid grid-cols-2 md:grid-cols-12 gap-10  text-left">
-        {/* Column 1 */}
         <div className="space-y-2 font-open-sans text-[#CFAC6A] md:col-span-2">
           <p className="mb-3">OUR FOOD</p>
           <p>DRINKS MENU</p>
@@ -16,7 +15,6 @@ const Footer = () => {
           <p>OUR POLICY</p>
         </div>
 
-        {/* Column 2 */}
         <div className="space-y-2 font-open-sans text-[#CFAC6A] md:col-span-2">
           <p className="mb-3">BLOG</p>
           <p>PRESS</p>
@@ -25,7 +23,6 @@ const Footer = () => {
           <p>FIND US</p>
         </div>
 
-        {/* Column 3 */}
         <div className="space-y-2 font-open-sans text-[#CFAC6A] md:col-span-2">
           <p className="mb-3">BIRTHDAY BOOKINGS</p>
           <p>CORPORATE EVENTS</p>
@@ -34,7 +31,6 @@ const Footer = () => {
           <p>OUR PARTNERS</p>
         </div>
 
-        {/* Logo + Socials */}
         <div className="flex flex-col -mt-5 md:-mt-32  md:space-y-40 md:col-span-2">
           <Image
             width={160}
@@ -52,7 +48,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Column 5 - Contact */}
         <div className="space-y-2 font-open-sans text-[#CFAC6A] md:col-span-2">
           <p className="mb-3">CONTACT</p>
           <p>44 Station Approach, Hayes,</p>
@@ -60,7 +55,6 @@ const Footer = () => {
           <p>+44 20 8462 9898</p>
         </div>
 
-        {/* Column 6 - Opening Hours */}
         <div className="space-y-2 font-open-sans text-sm text-[#CFAC6A] md:col-span-2">
           <p className="mb-3">OPENING HOURS</p>
           <p>Monday - 12 PM - 10:30 PM</p>
@@ -72,7 +66,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Footer Bar */}
       <div className="mt-10 flex flex-col md:flex-row justify-between text-center font-open-sans text-xs text-[#CFAC6A] px-4 md:px-0">
         <p>© 2025 VU LOUNGE, ALL RIGHTS RESERVED</p>
         <p className="mt-2 md:mt-0">POWERED BY FOODO</p>
