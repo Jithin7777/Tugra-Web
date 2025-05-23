@@ -15,18 +15,18 @@ const ReserveSection = () => {
         priority
       />
 
-      <div className="absolute inset-0 bg-black opacity-40 z-10" />
+      <div className="absolute inset-0 z-10 bg-black opacity-40" />
 
-      <div className="relative z-20 flex justify-center items-center h-full">
-        <div className="bg-gradient-to-b from-[#F3CB6E] to-[#866F39] text-black w-[80%] md:w-[480px] h-[700px] px-6 text-center clip-curve rounded-bl-[600px] rounded-br-[600px] flex flex-col items-center justify-center">
-          <h2 className="text-2xl md:text-4xl font-light font-open-sans uppercase tracking-[10.51px] mb-4">
+      <div className="relative z-20 flex h-full items-center justify-center">
+        <div className="clip-curve flex h-[700px] w-[80%] flex-col items-center justify-center rounded-br-[600px] rounded-bl-[600px] bg-gradient-to-b from-[#F3CB6E] to-[#866F39] px-6 text-center text-black md:w-[480px]">
+          <h2 className="font-open-sans mb-4 text-2xl font-light tracking-[10.51px] uppercase md:text-4xl">
             Reserve <br /> Your Table
           </h2>
-          <p className="text-sm text-[#00000099] max-w-lg mx-auto mb-6 font-inter">
+          <p className="font-inter mx-auto mb-6 max-w-lg text-sm text-[#00000099]">
             Secure your spot for an unforgettable Turkish dining experience.
             Book your table now and let us take care of the rest!
           </p>
-          <button className="px-6 font-open-sans bg-gradient-to-r from-[#76560A] to-[#715B3E] hex-button py-2 bg-transparent border border-black rounded-md hover:bg-black hover:text-white transition-all">
+          <button className="font-open-sans hex-button rounded-md border border-black bg-transparent bg-gradient-to-r from-[#76560A] to-[#715B3E] px-6 py-2 transition-all hover:bg-black hover:text-white">
             BOOK TABLE
           </button>
         </div>

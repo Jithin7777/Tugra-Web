@@ -65,48 +65,48 @@ const MenuShowcaseCarousel = () => {
   if (!hasMounted) return null;
 
   return (
-    <div className="bg-black w-full py-8 md:py-16 px-4">
-      <h2 className="text-center text-[#C9AB81]  text-lg tracking-[5.51px]  font-normal uppercase mb-8 md:mb-12 font-open-sans ">
+    <div className="w-full bg-black px-4 py-8 md:py-16">
+      <h2 className="font-open-sans mb-8 text-center text-lg font-normal tracking-[5.51px] text-[#C9AB81] uppercase md:mb-12">
         What do we <br />
         have for you
       </h2>
 
-      <div className="relative w-full max-w-7xl mx-auto">
+      <div className="relative mx-auto w-full max-w-7xl">
         {/* /* Left Arrow  */}
         <button
-          className="bg-[#0E171A]  absolute top-[40%] -left-2 md:-left-12 -translate-y-1/2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full  hover:bg-black text-white z-10"
+          className="absolute top-[40%] -left-2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-[#0E171A] text-white hover:bg-black md:-left-12 md:h-10 md:w-10"
           onClick={() => emblaApi?.scrollPrev()}
           aria-label="Previous slide"
         >
-          <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-[#C9AB81]" />
+          <ArrowLeft className="h-4 w-4 text-[#C9AB81] md:h-5 md:w-5" />
         </button>
 
         {/* Carousel Container  */}
-        <div className="embla overflow-hidden mx-8 md:mx-12" ref={emblaRef}>
+        <div className="embla mx-8 overflow-hidden md:mx-12" ref={emblaRef}>
           <div className="flex">
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="min-w-0 flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_33.33%] px-2 md:px-4"
+                className="min-w-0 flex-[0_0_85%] px-2 sm:flex-[0_0_60%] md:flex-[0_0_33.33%] md:px-4"
               >
                 <div className="flex flex-col items-center gap-5 md:gap-6">
                   <div
-                    className={`p-1 md:p-[9.95px] bg-gradient-to-r from-[#AE8B38] to-black ${slide.shape}`}
+                    className={`bg-gradient-to-r from-[#AE8B38] to-black p-1 md:p-[9.95px] ${slide.shape}`}
                   >
                     <div
-                      className={`w-full h-[250px] md:h-[380px] overflow-hidden bg-black shadow-lg ${slide.shape}`}
+                      className={`h-[250px] w-full overflow-hidden bg-black shadow-lg md:h-[380px] ${slide.shape}`}
                     >
                       <Image
                         src={slide.src}
                         alt={slide.title}
                         width={500}
                         height={600}
-                        className="object-cover w-full h-full"
+                        className="h-full w-full object-cover"
                         priority={index === 0}
                       />
                     </div>
                   </div>
-                  <p className="text-[#C9AB81] font-normal tracking-[10px] text-xs md:text-sm uppercase font-open-sans ">
+                  <p className="font-open-sans text-xs font-normal tracking-[10px] text-[#C9AB81] uppercase md:text-sm">
                     {slide.title}
                   </p>
                 </div>
@@ -117,20 +117,20 @@ const MenuShowcaseCarousel = () => {
 
         {/* Right Arrow  */}
         <button
-          className="bg-[#0E171A]  absolute top-[40%] -right-2 md:-right-12 -translate-y-1/2 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full  hover:bg-black text-white z-10"
+          className="absolute top-[40%] -right-2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-[#0E171A] text-white hover:bg-black md:-right-12 md:h-10 md:w-10"
           onClick={() => emblaApi?.scrollNext()}
           aria-label="Next slide"
         >
-          <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-[#C9AB81]" />
+          <ArrowRight className="h-4 w-4 text-[#C9AB81] md:h-5 md:w-5" />
         </button>
 
         {/* Diamond Indicators */}
-        <div className="flex justify-center gap-3 md:gap-4 mt-6 md:mt-8">
+        <div className="mt-6 flex justify-center gap-3 md:mt-8 md:gap-4">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => emblaApi?.scrollTo(index)}
-              className={`w-2 h-2 md:w-2 md:h-2 rotate-45 transition-all duration-300 relative overflow-hidden ${
+              className={`relative h-2 w-2 rotate-45 overflow-hidden transition-all duration-300 md:h-2 md:w-2 ${
                 index === selectedIndex
                   ? "scale-125 border border-[#9C7C57]"
                   : "border border-[#9C7C576E] hover:border-[#9C7C57]"
@@ -144,13 +144,7 @@ const MenuShowcaseCarousel = () => {
                     : "from-[#9C7C576E] via-[#9C7C573D] to-[#9C7C576E]"
                 }`}
               />
-              <div
-                className="absolute inset-0 bg-gradient-to-tl opacity-60 ${
-                index === selectedIndex
-                  ? 'from-[#B08D5F] to-transparent'
-                  : 'from-[#9C7C576E] to-transparent'
-              }"
-              />
+              <div className="${ index === selectedIndex ? 'from-[#B08D5F] to-transparent' : 'from-[#9C7C576E] to-transparent' } absolute inset-0 bg-gradient-to-tl opacity-60" />
             </button>
           ))}
         </div>

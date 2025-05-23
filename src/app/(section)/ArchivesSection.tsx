@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const ArchivesSection = () => {
   return (
-    <section className="relative py-26 bg-black overflow-hidden">
-      <div className="absolute -top-50 md:-right-45 md:w-[900px] h-[200px] md:h-[900px] opacity-50 z-0">
+    <section className="relative overflow-hidden bg-black py-26">
+      <div className="absolute -top-50 z-0 h-[200px] opacity-50 md:-right-45 md:h-[900px] md:w-[900px]">
         <Image
           src="/images/archives/bg-right.png"
           alt="Right background"
@@ -17,68 +17,68 @@ const ArchivesSection = () => {
       </div>
 
       <div className="relative z-10">
-        <h2 className="text-3xl tracking-[10.51px] uppercase font-normal font-open-sans text-center text-[#C9AB81] mb-8">
+        <h2 className="font-open-sans mb-8 text-center text-3xl font-normal tracking-[10.51px] text-[#C9AB81] uppercase">
           From Our <br /> Archives
         </h2>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4 items-start mt-10 md:mt-30">
-        <div className="flex flex-col font-open-sans font-normal leading-none mt-6">
+      <div className="relative z-10 mx-auto mt-10 grid max-w-7xl grid-cols-1 items-start gap-6 px-4 md:mt-30 md:grid-cols-3">
+        <div className="font-open-sans mt-6 flex flex-col leading-none font-normal">
           {Array.from({ length: 12 }).map((_, i) => (
             <span
               key={i}
-              className="block -mt-7 md:-mt-12 tracking-[-10px] md:tracking-[-20px] text-[80px] md:text-[135px] bg-gradient-to-b from-[#9B834E] to-[#352D1B] bg-clip-text text-transparent"
+              className="-mt-7 block bg-gradient-to-b from-[#9B834E] to-[#352D1B] bg-clip-text text-[80px] tracking-[-10px] text-transparent md:-mt-12 md:text-[135px] md:tracking-[-20px]"
             >
               TUGRA
             </span>
           ))}
         </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:gap-6 col-span-2">
-          <div className="flex flex-col gap-6 items-center">
+        <div className="col-span-2 grid grid-cols-2 gap-4 sm:gap-6">
+          <div className="flex flex-col items-center gap-6">
             <Image
               src="/images/archives/img1.png"
               alt="Archive 1"
               width={400}
               height={250}
-              className="object-cover w-[200px] h-[200px] md:w-[400px] md:h-[400px]"
+              className="h-[200px] w-[200px] object-cover md:h-[400px] md:w-[400px]"
             />
             <Image
               src="/images/archives/img3.png"
               alt="Archive 2"
               width={400}
               height={250}
-              className="object-cover w-[200px] h-[200px] md:w-[400px] md:h-[400px]"
+              className="h-[200px] w-[200px] object-cover md:h-[400px] md:w-[400px]"
             />
             <Image
               src="/images/archives/img2.png"
               alt="Archive 3"
               width={400}
               height={130}
-              className="object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px]"
+              className="h-[100px] w-[200px] object-cover md:h-[200px] md:w-[400px]"
             />
           </div>
-          <div className="flex flex-col gap-6 items-center">
+          <div className="flex flex-col items-center gap-6">
             <Image
               src="/images/archives/img4.png"
               alt="Archive 4"
               width={400}
               height={250}
-              className="object-cover w-[200px] h-[200px] md:w-[400px] md:h-[400px]"
+              className="h-[200px] w-[200px] object-cover md:h-[400px] md:w-[400px]"
             />
             <Image
               src="/images/archives/img5.png"
               alt="Archive 5"
               width={400}
               height={250}
-              className="object-cover w-[200px] h-[200px] md:w-[400px] md:h-[400px]"
+              className="h-[200px] w-[200px] object-cover md:h-[400px] md:w-[400px]"
             />
             <Image
               src="/images/archives/img6.png"
               alt="Archive 6"
               width={400}
               height={130}
-              className="object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px]"
+              className="h-[100px] w-[200px] object-cover md:h-[200px] md:w-[400px]"
             />
           </div>
         </div>

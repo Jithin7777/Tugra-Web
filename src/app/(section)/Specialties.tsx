@@ -43,22 +43,22 @@ const Specialties = () => {
   ];
 
   return (
-    <section className="bg-black text-white py-16 text-center">
-      <h2 className="text-2xl md:text-4xl font-light text-[#D2B48C] tracking-wide mb-12">
+    <section className="bg-black py-16 text-center text-white">
+      <h2 className="mb-12 text-2xl font-light tracking-wide text-[#D2B48C] md:text-4xl">
         OUR BEST SPECIALTIES
       </h2>
 
       {/* Mobile View  */}
-      <div className="md:hidden mx-auto max-w-xs px-4 flex items-center justify-between">
+      <div className="mx-auto flex max-w-xs items-center justify-between px-4 md:hidden">
         <button
           onClick={prev}
-          className="text-[#D2B48C] hover:scale-110 transition mb-12"
+          className="mb-12 text-[#D2B48C] transition hover:scale-110"
         >
           <ArrowLeft size={32} />
         </button>
 
         <div className="text-center">
-          <div className="relative w-50 h-50 mx-auto mb-4">
+          <div className="relative mx-auto mb-4 h-50 w-50">
             <Image
               src={dishes[index].image}
               alt={dishes[index].title}
@@ -71,7 +71,7 @@ const Specialties = () => {
               sizes="100vw"
             />
           </div>
-          <h3 className="uppercase text-sm tracking-widest text-[#D2B48C] mb-1">
+          <h3 className="mb-1 text-sm tracking-widest text-[#D2B48C] uppercase">
             {dishes[index].title}
           </h3>
           <p className="text-[#D2B48C]">€ {dishes[index].price}</p>
@@ -79,25 +79,25 @@ const Specialties = () => {
 
         <button
           onClick={next}
-          className="text-[#D2B48C] hover:scale-110 transition mb-12"
+          className="mb-12 text-[#D2B48C] transition hover:scale-110"
         >
           <ArrowRight size={32} />
         </button>
       </div>
 
       {/* Desktop View  */}
-      <div className="hidden md:flex mx-auto max-w-screen-xl px-4 items-center justify-center gap-28">
+      <div className="mx-auto hidden max-w-screen-xl items-center justify-center gap-28 px-4 md:flex">
         <button
           onClick={prev}
-          className="text-[#D2B48C] hover:scale-110 transition mx-4"
+          className="mx-4 text-[#D2B48C] transition hover:scale-110"
         >
           <ArrowLeft size={32} />
         </button>
 
         <div className="flex gap-32">
           {visibleDishes.map((dish, i) => (
-            <div key={i} className="text-center max-w-xs">
-              <div className="relative w-60 h-60 mx-auto mb-4">
+            <div key={i} className="max-w-xs text-center">
+              <div className="relative mx-auto mb-4 h-60 w-60">
                 <Image
                   src={dish.image}
                   alt={dish.title}
@@ -108,7 +108,7 @@ const Specialties = () => {
                   sizes="33vw"
                 />
               </div>
-              <h3 className="uppercase text-sm tracking-widest text-[#D2B48C] mb-1">
+              <h3 className="mb-1 text-sm tracking-widest text-[#D2B48C] uppercase">
                 {dish.title}
               </h3>
               <p className="text-[#D2B48C]">€ {dish.price}</p>
@@ -118,13 +118,13 @@ const Specialties = () => {
 
         <button
           onClick={next}
-          className="text-[#D2B48C] hover:scale-110 transition mx-4"
+          className="mx-4 text-[#D2B48C] transition hover:scale-110"
         >
           <ArrowRight size={32} />
         </button>
       </div>
 
-      <button className="mt-10 border border-[#D2B48C] px-6 py-2 text-[#D2B48C] rounded hover:bg-[#D2B48C] hover:text-black transition">
+      <button className="mt-10 rounded border border-[#D2B48C] px-6 py-2 text-[#D2B48C] transition hover:bg-[#D2B48C] hover:text-black">
         VIEW MENU
       </button>
     </section>
